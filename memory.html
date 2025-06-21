@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Game 💕</title>
+  <link rel="stylesheet" href="memory.css" />
+</head>
+<body>
+  <div id="instructions-memory">
+    <h2>🧠Instrucciones</h2>
+    <ul>
+      <li><strong>Objetivo:</strong> Encontrá todas las parejas antes de que se acabe el tiempo.</li>
+      <li><strong>Tiempo:</strong> Cada nivel te da 60 segundos.</li>
+      <li><strong>Dificultad:</strong> Hay 3 niveles. Cada uno agrega más cartas a encontrar.</li>
+      <li><strong>Controles:</strong> Hacé clic en las cartas para darlas vuelta y encontrar las parejas.</li>
+      <li><strong>Premio:</strong> Si completás un nivel, pasás al siguiente. Al completar el nivel 3 ganás <strong>25 coins</strong>.</li>
+    </ul>
+    <button onclick="document.getElementById('instructions-memory').style.display='none'">¡Entendido!</button>
+  </div>
+
+  <h1>Memory Game 💕</h1>
+  <p>Coins: <span id="coins">0</span></p>
+  <p id="level">Nivel: 1</p>
+  <p id="timer">Tiempo: 60s</p>
+
+  <div id="memory-board" class="board"></div>
+
+  <script src="memory.js"></script>
+</body>
+</html>

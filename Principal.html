@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juegos Románticos 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffc1cc);
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d81b60;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin: 20px 0;
+    }
+
+    nav a {
+      display: inline-block;
+      background-color: #f8bbd0;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #880e4f;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #f48fb1;
+    }
+
+    #coins-display {
+      font-size: 18px;
+      margin: 20px 0;
+      color: #c2185b;
+    }
+
+    #mensaje-romantico {
+      background-color: #fff0f5;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 15px;
+      border: 2px dashed #f06292;
+      font-size: 17px;
+      color: #6a1b9a;
+    }
+
+    #musica-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: #f48fb1;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #musica-btn:hover {
+      background-color: #ec407a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Juegos Románticos 💕</h1>
+
+  <nav>
+    <a href="juego1.html">💘 Atrapa los Corazones</a>
+    <a href="memory.html">🧠 Memory Game</a>
+    <a href="corre.html">🛩️ Flappy Love</a>
+    <a href="tienda.html">🛍️ Tienda de Citas</a>
+  </nav>
+
+  <div id="coins-display">Coins: <span id="coins">0</span></div>
+
+  <div id="mensaje-romantico">
+    Esta página fue creada como un espacio divertido y especial para compartir<br>
+    momentos con alguien importante. A través de juegos, citas y detalles,<br>
+    podés demostrar tu cariño de una manera única. 💞
+  </div>
+
+  <button id="musica-btn" onclick="toggleMusica()">🔊 Activar / Pausar música</button>
+  <audio id="musicaFondo" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    // Mostrar coins guardadas desde localStorage
+    const coinsSpan = document.getElementById("coins");
+    let coins = parseInt(localStorage.getItem("coins")) || 0;
+    coinsSpan.textContent = coins;
+
+    // Control de música
+    function toggleMusica() {
+      const audio = document.getElementById("musicaFondo");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+</html>

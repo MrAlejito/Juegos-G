@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flappy Love 🛩️❤️</title>
+  <link rel="stylesheet" href="corre.css" />
+</head>
+<body>
+  <h1>Flappy Love 🛩️❤️</h1>
+  <p>Coins: <span id="coins">0</span> | Multiplicador: <span id="mult">x1</span></p>
+  <p>Próxima cosecha en: <span id="cosecha-timer">30</span>s</p>
+  <div id="instrucciones" class="overlay">
+  <div class="cartel">
+    <h2>🛩️Instrucciones</h2>
+    <p><strong>Objetivo:</strong> Volá como un avión, esquivá obstáculos y recolectá corazones.</p>
+    <p><strong>Controles:</strong> Presioná <kbd>Espacio</kbd> o hacé <strong>click</strong> para subir.</p>
+    <p><strong>Desafío:</strong> Si pasás 30 segundos sin chocar, ganás los corazones recolectados.</p>
+    <p><strong>Consejo:</strong> Cuanto más tiempo sobrevivas, mayor será el multiplicador y la velocidad.</p>
+    <button onclick="document.getElementById('instrucciones').style.display='none'">¡Entendido!</button>
+  </div>
+</div>
+
+  <div id="game">
+    <img id="player" src="https://cdn-icons-png.flaticon.com/512/3324/3324544.png" alt="Avión" />
+  </div>
+  <div id="cita-magica-banner" style="display: none;"></div>
+
+  <script src="corre.js"></script>
+</body>
+</html>

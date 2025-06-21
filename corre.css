@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #d3f0ff, #fbeaff);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+#game {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 3px solid #e91e63;
+  border-radius: 15px;
+}
+
+#player {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  left: 100px;
+  top: 150px;
+  transition: transform 0.1s;
+}
+
+.obstacle, .heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  user-select: none;
+}
+
+.obstacle {
+  color: black;
+}
+
+.heart {
+  color: red;
+}
+#cita-magica-banner {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 100;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cartel {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+  font-size: 16px;
+}
+
+.cartel h2 {
+  margin-top: 0;
+  color: #e91e63;
+}
+
+.cartel button {
+  margin-top: 20px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cartel button:hover {
+  background: #c2185b;
+}

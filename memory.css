@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ad1457;
+  text-shadow: 1px 1px 3px #fff;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.board {
+  width: fit-content;
+  max-width: 90vw;
+  margin: 20px auto;
+  display: grid;
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+/* Para nivel 1: 4 pares = 8 cartas → 4 columnas x 2 filas */
+.level-1 {
+  grid-template-columns: repeat(4, 70px);
+}
+
+/* Para nivel 2: 6 pares = 12 cartas → 4 columnas x 3 filas */
+.level-2 {
+  grid-template-columns: repeat(4, 70px);
+}
+
+/* Para nivel 3: 9 pares = 18 cartas → 6 columnas x 3 filas */
+.level-3 {
+  grid-template-columns: repeat(5, 70px);
+}
+
+/* Responsive: en pantallas chicas ajustar nivel 3 a 3 columnas x 6 filas */
+@media (max-width: 500px) {
+  .level-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  width: 70px;
+  height: 70px;
+  background-color: #f8bbd0;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  perspective: 600px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  user-select: none;
+}
+
+.card-front {
+  background-color: #f48fb1;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  background-color: #ec407a;
+  color: white;
+  font-weight: bold;
+}
+
+/* Cartel de instrucciones */
+#instructions-memory {
+  width: 90%;
+  max-width: 400px;
+  background: #fff3f6;
+  color: #880e4f;
+  border-radius: 15px;
+  padding: 15px 25px;
+  box-shadow: 0 5px 15px rgba(136, 14, 79, 0.3);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 10px auto;
+}
+
+#instructions-memory h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #c2185b;
+  text-shadow: 0 0 2px #f8bbd0;
+}
+
+#instructions-memory ul {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#instructions-memory li {
+  margin-bottom: 8px;
+}
+
+#instructions-memory button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #f06292;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#instructions-memory button:hover {
+  background-color: #ec407a;
+}
+#memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 70px); /* para nivel 1: 4 columnas */
+  justify-content: center;  /* centra las columnas dentro del contenedor */
+  gap: 10px;
+  width: max-content;       /* ancho ajustado justo al contenido */
+  margin: 0 auto 20px auto; /* centrado horizontal con margen abajo */
+}

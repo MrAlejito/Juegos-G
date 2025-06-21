@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Atrapa los Corazones</title>
+  <link rel="stylesheet" href="juego1.css" />
+</head>
+<body>
+  <div>
+    <div id="stats">
+      Coins: <span id="coins">0</span> |
+      Multiplicador: <span id="mult">x1</span>
+    </div>
+
+    <div id="game-area">
+      <div id="player"></div>
+    </div>
+  </div>
+  <div id="magic-date-banner" style="display:none;">
+    🌟 ¡Modo DIAVLO activado! 🌟
+  </div>
+  <div id="instructions">
+    <h2>Instrucciones</h2>
+    <ul>
+      <li>Usa las teclas ← y → para mover el jugador.</li>
+      <li>Atrapa los corazones ❤️ para ganar coins.</li>
+      <li>Evita las bombas 💣; si las tocas, pierdes el multiplicador y la dificultad vuelve a la normalidad.</li>
+      <li>Si evitas chocar con bombas durante 10 segundos, tu multiplicador aumentará, aumentando también la dificultad.</li>
+      <li>Cuando llegues a multiplicador x5, se activa el <strong>Modo DIAVLO</strong> 🌟.</li>
+    </ul>
+  </div>
+
+
+  <button id="btnMusica" onclick="toggleMusica()">🔇 Pausar música</button>
+
+  <script src="juego1.js"></script>
+
+</body>
+</html>

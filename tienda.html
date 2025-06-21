@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda de Citas 💕</title>
+  <link rel="stylesheet" href="tienda.css" />
+</head>
+<body>
+  <h1>Tienda de Citas 💕</h1>
+  <p>Coins disponibles: <span id="coins">0</span></p>
+
+  <div class="tienda">
+    <div class="item">
+      <h3>🧁 Merienda Romántica</h3>
+      <p>150 coins</p>
+      <button onclick="comprar('merienda', 150)">Comprar</button>
+    </div>
+    <div class="item">
+      <h3>🍨 Helado Compartido</h3>
+      <p>100 coins</p>
+      <button onclick="comprar('helado', 100)">Comprar</button>
+    </div>
+    <div class="item">
+      <h3>🍳 Desayuno Juntos</h3>
+      <p>120 coins</p>
+      <button onclick="comprar('desayuno', 120)">Comprar</button>
+    </div>
+    <div class="item">
+      <h3>🌌 Cita Bajo las Estrellas</h3>
+      <p>200 coins</p>
+      <button onclick="comprar('estrellas', 200)">Comprar</button>
+    </div>
+  </div>
+
+  <div id="mensaje" class="oculto">¡Compra realizada!</div>
+
+  <!-- 👇 Esto es clave: el script va justo antes del cierre de body -->
+  <script src="tienda.js"></script>
+
+ </body>
+</html>
